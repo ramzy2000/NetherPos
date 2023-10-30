@@ -5,6 +5,7 @@
 #include <qpushbutton.h>
 #include <qmessagebox.h>
 #include <qradiobutton.h>
+#include <qabstractbutton.h>
 
 struct Pos
 {
@@ -60,8 +61,8 @@ NetherPos::NetherPos(QWidget *parent)
 
 	connect(ui->calculatePushButton, &QPushButton::clicked, this, &NetherPos::calculatePushButton_clicked);
 
-	connect(ui->worldRadioButton, &QRadioButton::toggled, this, &NetherPos::updateInstructionLabelWorld);
-	connect(ui->netherRadioButton, &QRadioButton::toggled, this, &NetherPos::updateInstructionLabelNether);
+	connect(ui->worldRadioButton, &QAbstractButton::clicked, this, &NetherPos::updateInstructionLabelNether);
+	connect(ui->netherRadioButton, &QAbstractButton::clicked, this, &NetherPos::updateInstructionLabelWorld);
 }
 
 NetherPos::~NetherPos()
@@ -97,16 +98,10 @@ void NetherPos::calculatePushButton_clicked()
 
 void NetherPos::updateInstructionLabelWorld()
 {
-	if (ui->worldRadioButton->isChecked())
-	{
-		ui->instructionLabel->setText("Enter a world position");
-	}
+	ui->instructionLabel->setText("Enter a world position");
 }
 
 void NetherPos::updateInstructionLabelNether()
 {
-	if (ui->netherRadioButton->isChecked())
-	{
-		ui->instructionLabel->setText("Enter a nether position");
-	}
+	ui->instructionLabel->setText("Enter a nether position");
 }
