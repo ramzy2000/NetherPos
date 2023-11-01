@@ -1,10 +1,10 @@
-#pragma once
+#ifndef NETHERPOS_H
+#define NETHERPOS_H
 
-#include <QtWidgets/QMainWindow>
-#include "ui_NetherPos.h"
+#include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class NetherPosClass; };
+namespace Ui { class NetherPos; }
 QT_END_NAMESPACE
 
 class NetherPos : public QMainWindow
@@ -22,5 +22,6 @@ public slots:
     void updateInstructionLabelNether();
 
 private:
-    Ui::NetherPosClass *ui;
+    Ui::NetherPos *ui;
 };
+#endif // NETHERPOS_H

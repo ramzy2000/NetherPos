@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NetherPosClass</class>
- <widget class="QMainWindow" name="NetherPosClass">
+ <class>NetherPos</class>
+ <widget class="QMainWindow" name="NetherPos">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -131,7 +131,7 @@
      <x>0</x>
      <y>0</y>
      <width>354</width>
-     <height>33</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
@@ -146,8 +146,6 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="NetherPos.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
